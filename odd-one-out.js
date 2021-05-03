@@ -1,22 +1,22 @@
 //https://edabit.com/challenge/PEecJK7uPz5m2oD9i
 //very hard
-
-// function oddOneOut(arr) {
-//   let oddOne = arr.sort((a, b) => a.length - b.length).pop();
-//   if (arr.every((element) => element.length === oddOne.length)) {
-//     return false;
-//   } else {
-//     return true;
-//   }
-// }
+//solved
 
 function oddOneOut(arr) {
-  let uniqueWord = "";
-  for (let word of arr) {
-    if (word.length !== arr[0].length) {
-      return word;
-    }
+  let obj = {};
+  for (let i = 0; i < arr.length; i++) {
+    obj[arr[i].length] = 0;
+  }
+  for (let i = 0; i < arr.length; i++) {
+    obj[arr[i].length] += 1;
+  }
+  if (Object.values(obj).length > 2) {
+    return false;
+  } else if (Object.values(obj).every((value) => value > 1)) {
+    return false;
+  } else {
+    return true;
   }
 }
 
-console.log(oddOneOut(["sil", "mom", "let", "the"]));
+console.log(oddOneOut(["silee", "meom", "let", "the"]));
