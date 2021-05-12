@@ -46,8 +46,23 @@
 // };
 // console.log(lengthOfLIS([10, 9, 2, 5, 3, 7, 101, 18]));
 
+// function lis(arr) {
+//   let lengthsArray = Array(arr.length).fill(1);
+//   for (let i = 1; i < arr.length; i++) {
+//     for (let j = 0; j < i; j++) {
+//       if (arr[j] < arr[i]) {
+//         lengthsArray[i] = Math.max(lengthsArray[i], lengthsArray[j] + 1);
+//       }
+//     }
+//   }
+//   return Math.max(...lengthsArray);
+// }
+
+// console.log(lis([10, 9, 2, 5, 3, 7, 101, 18]));
+
 function lis(arr) {
   let lengthsArray = Array(arr.length).fill(1);
+
   for (let i = 1; i < arr.length; i++) {
     for (let j = 0; j < i; j++) {
       if (arr[j] < arr[i]) {
