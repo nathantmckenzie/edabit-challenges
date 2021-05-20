@@ -1,6 +1,6 @@
 //https://edabit.com/challenge/w5LTwJwDLK4uQ3Dmv
 //very hard
-//unsolved
+//solved (not my solution)
 
 function group(arr, size) {
   const sortedArr = arr.sort((left, right) => left - right);
@@ -21,5 +21,5 @@ function group(arr, size) {
   return resultArr;
 }
 
-console.log(group([1, 2, 3, 4, 5, 6], 2)); //solved
+console.log(group([1, 2, 3, 4, 5, 6], 3)); //solved
 console.log(group([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 4));
