@@ -25,7 +25,7 @@ function distanceToNearestVowel(str) {
   return newArr;
 }
 
-// console.log(distanceToNearestVowel("aaaaa"));
-// console.log(distanceToNearestVowel("babbb"));
+console.log(distanceToNearestVowel("aaaaa"));
+console.log(distanceToNearestVowel("babbb"));
 console.log(distanceToNearestVowel("abcdabcd"));
-// console.log(distanceToNearestVowel("shopper"));
+console.log(distanceToNearestVowel("shopper"));
