@@ -3,14 +3,11 @@
 //unsolved
 
 function stringBuilder(s) {
-  const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-  const split = s.split("");
-  let obj = {};
-  for (let i = 0; i < split.length; i++) {
-    if (numbers.includes(split[i])) {
-      obj[Number(split[i])] = split;
-    }
-  }
+  return s.split("[").join("").split("]");
 }
 
 console.log(stringBuilder("3[a]2[bc]"));
+console.log(stringBuilder("3[a2[c]]"));
+console.log(stringBuilder("2[abc]3[cd]ef"));
+console.log(stringBuilder("abc3[cd]xyz"));
+console.log(stringBuilder("1[Mubashir_]i3[s]1[_Air]1[_Force]1[_Fan]"));
