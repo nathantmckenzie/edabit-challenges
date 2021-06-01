@@ -17,7 +17,7 @@ function bucketize(phrase, n) {
       length = arr[i].length;
     } else if (arr[i].length + 1 + length <= n) {
       if (i === 0) {
-        string += `${arr[i]}`;
+        string += `${arr[i]}`; 
         length += arr[i].length;
       } else {
         string += ` ${arr[i]}`;
