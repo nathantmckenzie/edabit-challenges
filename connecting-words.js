@@ -2,30 +2,30 @@
 //expert
 //solved
 
-function join(arr) {
+const join = (arr) => {
   let fullString = "";
   let i = 0;
   let k = 0;
   let overLapping = arr[i];
-  let array = [];
+  let numbers = [];
   while (i < arr.length - 1) {
     if (arr[i + 1].startsWith(overLapping)) {
-      array.push(arr[i].length - k);
-      //STARTS WITH
+      numbers.push(arr[i].length - k);
+
       if (i === 0) {
         fullString += arr[i].substring(0, k) + arr[i + 1];
       } else {
         let length = arr[i].length - k;
         fullString += arr[i + 1].substring(length);
       }
-      k = 0;
       i++;
+      k = 0;
     } else {
       k++;
       overLapping = arr[i].substring(k);
     }
   }
-  let minimumValue = Math.min(...array);
+  let minimumValue = Math.min(...numbers);
   if (minimumValue > 0) {
     return [fullString, minimumValue];
   } else {
@@ -34,7 +34,7 @@ function join(arr) {
       0,
     ];
   }
-}
+};
 
 console.log(join(["oven", "envier", "erase", "serious"]));
 console.log(join(["move", "over", "very"]));
